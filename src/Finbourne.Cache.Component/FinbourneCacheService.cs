@@ -9,7 +9,7 @@ namespace Finbourne.Cache.Component
 {
     public class FinbourneCacheService : IFinbourneCacheService
     {
-        private readonly FinbourneMemoryCache _memoryCache;
+        private readonly IFinbourneMemoryCache _memoryCache;
         private readonly double _expirationInSeconds;
 
         public FinbourneCacheService(IFinbourneMemoryCache memoryCache)
@@ -45,6 +45,9 @@ namespace Finbourne.Cache.Component
                     return;
 
                 // item still doesnt exits in cache so lets persist the data to cache
+                // we use sliding so highly used cached items will continue to be renewed.
+                // we have to set the size of each item we add
+                // when we forced an eviction we want the details of it so we can forward the information to consumer
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
                                                 .SetSlidingExpiration(TimeSpan.FromSeconds(_expirationInSeconds))
                                                 .SetSize(1)
@@ -95,7 +98,8 @@ namespace Finbourne.Cache.Component
         /// <param name="state">The state.</param>
         private void PostEvictionCallback(object key, object value, EvictionReason reason, object state)
         {
-            
+            // from here you can publish the a message on to service bus, or upadate a database record to
+            // state a cache item with specific key has been evicted.
         }
     }
 
