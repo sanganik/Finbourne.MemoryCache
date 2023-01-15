@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.810.11
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Finbourne.Api", "Finbourne.Api.csproj", "{A76759C9-291F-495D-AD6E-21DF7699D269}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Finbourne.Cache.Component", "..\Finbourne.Cache.Component\Finbourne.Cache.Component.csproj", "{E3D4B9BB-C175-4D6F-B4BF-107F098621CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Finbourne.UnitTests", "Finbourne.UnitTests\Finbourne.UnitTests.csproj", "{465FE5D8-B9E3-40A8-9D77-1ABA239E050A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{A76759C9-291F-495D-AD6E-21DF7699D269}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A76759C9-291F-495D-AD6E-21DF7699D269}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A76759C9-291F-495D-AD6E-21DF7699D269}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3D4B9BB-C175-4D6F-B4BF-107F098621CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3D4B9BB-C175-4D6F-B4BF-107F098621CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3D4B9BB-C175-4D6F-B4BF-107F098621CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3D4B9BB-C175-4D6F-B4BF-107F098621CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{465FE5D8-B9E3-40A8-9D77-1ABA239E050A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{465FE5D8-B9E3-40A8-9D77-1ABA239E050A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{465FE5D8-B9E3-40A8-9D77-1ABA239E050A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{465FE5D8-B9E3-40A8-9D77-1ABA239E050A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

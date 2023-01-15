@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 using System.IO;
+using Finbourne.Cache.Component;
 
 namespace Finbourne.Api
 {
@@ -27,6 +28,9 @@ namespace Finbourne.Api
                    .UseStartup<Startup>()
                    .ConfigureServices((httpContext, services) =>
                    {
+
+                       // Singleton
+                       services.AddSingleton<IFinbourneMemoryCache, FinbourneMemoryCache>();
 
                        // setup swagger
                        services.AddSwaggerGen(c =>
