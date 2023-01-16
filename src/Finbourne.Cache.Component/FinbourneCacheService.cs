@@ -88,7 +88,7 @@ namespace Finbourne.Cache.Component
         private void ForceEvictLRUCachedItem()
         {
             // get the percentile for 1 item. which will be evicted
-            var percentileToRemove = (double)1 / _sizeLimit * 100;
+            var percentileToRemove = (double)1 / _sizeLimit;
             _memoryCache.Compact(percentileToRemove);
         }
 
