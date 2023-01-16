@@ -20,7 +20,8 @@ namespace Finbourne.Cache.Component
             return new MemoryCache(
                         new MemoryCacheOptions
                         {
-                            SizeLimit = _sizeLimit
+                            SizeLimit = _sizeLimit,
+                            TrackStatistics = true
                         });
 
         }
